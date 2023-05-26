@@ -89,6 +89,17 @@ Confusion Matrix RandomForest:
 
 ![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion.PNG?raw=true)
 
+Random Forest:
+Accuracy: 78%
+Precision: 77%
+Recall: 81%
+
+XGBoost:
+Accuracy: 80%
+Precision: 77%
+Recall: 85%
+
+
 The model does about equally well on both classes thanks to oversampling, but unfortunately a bit worse on class 0 (loan denied) which is probably the class we'd want to make sure to get.
 
 The demo can be pulled using the training file in notebooks. This can be modified and it returns a 0 for loan denied and 1 for loan accepted.
