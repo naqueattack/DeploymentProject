@@ -19,7 +19,7 @@ Present credit history
 First I'll take a look at correlations between numeric variables and y variable. For nominal/categorical I can take a look at boxplots to get an idea of whether there is a difference or not.
 
 ## EDA 
-### There is a lot of EDA to cover, but the most interesting tidbits are the following:
+#### There is a lot of EDA to cover, but the most interesting tidbits are the following:
 
 ##### High class imbalance between loan acceptance and loan denial
 ##### Income is fairly tightly packed with numerous outliers
@@ -53,7 +53,7 @@ The below process was done using a pipeline and this is the order:
 #### Step 2: Log transformation of variables
 ##### 1. Log transformed LoanAmount
 ##### 2. Log transformed combination of income variables (dropped originals)
-### Step 3. Kept K Best numeric variables
+#### Step 3. Kept K Best numeric variables
 
 ## Modeling
 #### Model 1: XGBoost
