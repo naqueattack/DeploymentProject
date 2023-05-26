@@ -19,15 +19,15 @@ Present credit history
 First I'll take a look at correlations between numeric variables and y variable. For nominal/categorical I can take a look at boxplots to get an idea of whether there is a difference or not.
 
 ## EDA 
-There is a lot of EDA to cover, but the most interesting tidbits are the following:
+### There is a lot of EDA to cover, but the most interesting tidbits are the following:
 
--High class imbalance between loan acceptance and loan denial
--Income is fairly tightly packed with numerous outliers
--Men were overrepresented in the dataset
--Graduates were directionally more likely to be accepted for a loan. Self-employedness had no impact
--Loan status followed the direction I predicted for housing location
--Those without credit history had almost no chance of being approved for a loan
--Income and loan amount / length were only very weakly correlated with loan acceptance
+##### High class imbalance between loan acceptance and loan denial
+##### Income is fairly tightly packed with numerous outliers
+##### Men were overrepresented in the dataset
+##### Graduates were directionally more likely to be accepted for a loan. Self-employedness had no impact
+##### Loan status followed the direction I predicted for housing location
+##### Those without credit history had almost no chance of being approved for a loan
+##### Income and loan amount / length were only very weakly correlated with loan acceptance
 
 There are too many images to showcase here without bloating the file, so I'd point you to notebooks/instructions for full EDA
 
