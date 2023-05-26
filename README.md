@@ -111,7 +111,7 @@ Confusion Matrix RandomForest Non-Discriminatory:
 
 This model only performed slightly worse than the above with an accuracy of 77%. This model heavily relied on quantitative measures for its prediction with education, self-employment, living area, and # of dependents only making up about 25% of variable importance.
 
-Loan amount, credit history and income made up the bulk.
+Loan amount, credit history and income made up the bulk (see notebook for full details)
 
 The demo can be pulled using the training file in notebooks. This can be modified and it returns a 0 for loan denied and 1 for loan accepted.
 
