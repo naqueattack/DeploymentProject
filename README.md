@@ -102,6 +102,17 @@ Recall: 85%
 
 The model does about equally well on both classes thanks to oversampling, but unfortunately a bit worse on class 0 (loan denied) which is probably the class we'd want to make sure to get.
 
+There is a problem with the above models if we look at them outside of an academic sense, however. They both include variables no bank could use when determining loan eligibility: Marital status and gender. I reran my chosen model without these two variables
+
+
+Confusion Matrix RandomForest Non-Discriminatory:
+
+![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion2.PNG?raw=true)
+
+This model only performed slightly worse than the above with an accuracy of 77%. This model heavily relied on quantitative measures for its prediction with education, self-employment, living area, and # of dependents only making up about 25% of variable importance.
+
+Loan amount, credit history and income made up the bulk.
+
 The demo can be pulled using the training file in notebooks. This can be modified and it returns a 0 for loan denied and 1 for loan accepted.
 
 ## Challenges 
