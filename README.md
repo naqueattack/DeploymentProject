@@ -35,31 +35,31 @@ There are too many images to showcase here without bloating the file, so I'd poi
 The below process was done using a pipeline and this is the order:
 
 ## Oversampling & Splitting
-### Step 1: Oversampled the data at a rate of 0.8 to 1 to help correct imbalance without copying too much. This improved the models quite a bit
-### Step 2: Shuffled the data before splitting
-### Step 3: Split data into test train (80% split)
+#### Step 1: Oversampled the data at a rate of 0.8 to 1 to help correct imbalance without copying too much. This improved the models quite a bit
+#### Step 2: Shuffled the data before splitting
+#### Step 3: Split data into test train (80% split)
 
 ## Categorical Features
-### Step 1: Impute missing values
-#### 1. Used the most frequent value in these cases I didn't find a good connection to be able to predict them
-### Step 2: One hot encoding
-### Step 3: PCA
+#### Step 1: Impute missing values
+##### 1. Used the most frequent value in these cases I didn't find a good connection to be able to predict them
+#### Step 2: One hot encoding
+#### Step 3: PCA
 
 ## Numeric Features
-### Step 1: Impute missing values
-#### 1. Used the mean for LoanAmount
-#### 2. Used 360 (most common) for Loan_Amount_Term
-#### 3. Filled credit history with 0's as if we don't have it, we can assume we don't have their credit history
-### Step 2: Log transformation of variables
-#### 1. Log transformed LoanAmount
-#### 2. Log transformed combination of income variables (dropped originals)
+#### Step 1: Impute missing values
+##### 1. Used the mean for LoanAmount
+##### 2. Used 360 (most common) for Loan_Amount_Term
+##### 3. Filled credit history with 0's as if we don't have it, we can assume we don't have their credit history
+#### Step 2: Log transformation of variables
+##### 1. Log transformed LoanAmount
+##### 2. Log transformed combination of income variables (dropped originals)
 ### Step 3. Kept K Best numeric variables
 
 ## Modeling
-### Model 1: XGBoost
-### Model 2: RandomForestClassifier
+#### Model 1: XGBoost
+#### Model 2: RandomForestClassifier
 
-#### Both models were trained using RandomGridSearch. The exact specifications can be found below:
+##### Both models were trained using RandomGridSearch. The exact specifications can be found below:
 
 XGBOOST - param_grid = {"preprocessing__cat_transform__pca__n_components": [2],
                   "preprocessing__num_transform__selection__k": [4],
