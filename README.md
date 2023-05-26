@@ -86,6 +86,7 @@ RandomForest - param_grid = {"preprocessing__cat_transform__pca__n_components": 
 Both models were similar in accuracy, though XGBoost did outperform RandomForest. In the end for production I used randomforest as I was unable to succesfully load XGBoost model in the cloud. This is a future endeavor as the accuracy difference is about 2%.
 
 Confusion Matrix RandomForest:
+
 ![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion.PNG?raw=true)
 
 The model does about equally well on both classes thanks to oversampling, but unfortunately a bit worse on class 0 (loan denied) which is probably the class we'd want to make sure to get.
