@@ -83,21 +83,19 @@ RandomForest - param_grid = {"preprocessing__cat_transform__pca__n_components": 
 ![Pipeline image](https://github.com/naqueattack/DeploymentProject/blob/master/images/Pipeline.PNG?raw=true)
 
 ## Results/Demo
-Both models were similar in accuracy, though XGBoost did outperform RandomForest. In the end for production I used randomforest as I was unable to succesfully load XGBoost model in the cloud. This is a future endeavor as the accuracy difference is about 2%.
+Both models were similar in accuracy, though XGBoost did outperform RandomForest. In the end for production I used randomforest as it had higher predictive power in terms of accuracy and F1 statistics.
 
 Confusion Matrix RandomForest:
 
-![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion.PNG?raw=true)
+![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion2.PNG?raw=true)
 
 Random Forest:
-Accuracy: 78%
-Precision: 77%
-Recall: 81%
+Accuracy: 79%
+F1: 81%
 
 XGBoost:
-Accuracy: 80%
-Precision: 77%
-Recall: 85%
+Accuracy: 78%
+F1: 78%
 
 
 The model does about equally well on both classes thanks to oversampling, but unfortunately a bit worse on class 0 (loan denied) which is probably the class we'd want to make sure to get.
@@ -107,9 +105,9 @@ There is a problem with the above models if we look at them outside of an academ
 
 Confusion Matrix RandomForest Non-Discriminatory:
 
-![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion2.PNG?raw=true)
+![Confusion Matrix](https://github.com/naqueattack/DeploymentProject/blob/master/images/Confusion.PNG?raw=true)
 
-This model only performed slightly worse than the above with an accuracy of 77%. This model heavily relied on quantitative measures for its prediction with education, self-employment, living area, and # of dependents only making up about 25% of variable importance.
+This model only performed slightly worse than the above with an accuracy of 77% and F1 of 78%. This model heavily relied on quantitative measures for its prediction with education, self-employment, living area, and # of dependents only making up about 25% of variable importance.
 
 Loan amount, credit history and income made up the bulk (see notebook for full details)
 
